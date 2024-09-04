@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+  <mapper namespace="com.here_you_go.project.dao.IFaqDAO">
+  	<!-- 예약 카테고리에 해당하는 FAQ 리스트를 가져오는 쿼리 -->
+    <select id="listFaqsByCategory" resultType="com.here_you_go.project.model.FaqVO">
+        SELECT faqNo, faqTextf, faqTexta
+        FROM faq
+        WHERE faqctgId = #{faqctgId}
+    </select>
+  </mapper>
+  

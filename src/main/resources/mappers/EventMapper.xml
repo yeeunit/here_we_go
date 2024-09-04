@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+	<mapper namespace="com.here_you_go.project.dao.IEventDAO">
+	  
+	      <resultMap id="eventResult" type="com.here_you_go.project.model.EventVO" >
+	           <result property="evnNo" column="evnNo"  />
+                  <result property="evnName" column="evnName"  />
+                  <result property="evnStartDate" column="evnStartDate"  />
+                 <result property="evnEndDate" column="evnEndDate"  />
+                  <result property="evnInfo" column="evnInfo"  />
+                  <result property="evnImg" column="evnImg"  />
+                 <result property="evnStatus" column="evnStatus"  />
+                  <result property="evnctgId" column="evnctgId"  /> 
+	      </resultMap>
+	      
+	      <select id="listAllEvent" resultMap="eventResult">
+	            SELECT * FROM event ORDER BY CAST(evnNo AS UNSIGNED); ; 
+	      </select>
+	      
+	          <!-- 상품 상세 정보 조회 -->
+                  <!-- 상품번호(string) 전달받아서 해당 상품 찾아서 반환 (VO) -->
+                  <select id="detailViewEvent" parameterType="string"
+                                      resultType="com.here_you_go.project.model.EventVO">
+                        SELECT * FROM event WHERE evnNo = #{evnNo}
+                  </select>
+	      
+	</mapper>
+	  
+  
+  

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+      <mapper namespace="com.here_you_go.project.dao.IPopularTravelDAO">
+        
+            <resultMap id="popularTravelResult" type="com.here_you_go.project.model.PopularTravelVO" >
+                  <result property="popNo" column="popNo"  />
+                  <result property="popName" column="popName"  />
+                  <result property="popInfo" column="popInfo"  />
+                  <result property="popImg" column="popImg"  />
+            </resultMap>
+            
+            <select id="listAllPopularTravel" resultMap="popularTravelResult">
+                  SELECT * FROM popular_travel ORDER BY CAST(popNo AS UNSIGNED); 
+            </select>
+            
+      </mapper>
+        

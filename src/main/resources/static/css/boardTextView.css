@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "GmarketSansMedium"
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 28px;
+}
+
+h2 {
+		text-align: center;
+		color:firebrick;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 22px;
+	
+}
+
+
+section.board {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.form-group {
+		margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group span,
+.form-group pre {
+    display: block;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.form-group pre {
+		height: 150px;
+		max-height:400px;
+		font-size:15px;
+		font-family: Arial, sans-serif;
+}
+
+.buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.buttons .btn {
+    color: white;
+    background-color: firebrick;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size:14px;
+}
+
+.btn:hover {
+    background-color: rgb(214, 137, 137);
+}
+
+#answerText {
+		height:150px;
+}

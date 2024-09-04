@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/* customer.css */
+
+.customer, .faq-container {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+
+h1, h2, h5 {
+    font-weight: bold;
+}
+
+ /* 고객센터 */
+h1 {
+    font-size: 30px;
+}
+
+/* 무엇이든 물어보세요 */
+h5 {
+		
+    color: #959595;
+}
+
+ /* customer_head 스타일  */
+ 
+ .contact-info {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    margin-top: -30px;
+}
+
+.phoneNum {
+		font-size: larger;
+    margin-left: 40px;
+    position: relative;
+    top: -10px;
+}
+
+.phone {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 20px;
+}
+
+.contact-require,
+.contact-hours {
+    color: #9f9d9d;
+    font-size: 14px;
+    position: relative;
+    bottom: 0px;
+    left: 20px;
+    
+}
+
+.contact-title {
+    padding: 20px;
+}
+
+.contact-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+.contact-button {
+    padding: 10px 20px;
+    background-color: firebrick;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    bottom: 60px;
+    right: 20px;
+}
+
+.contact-button:hover{
+	background-color: rgb(214, 137, 137);
+}
+
+ /* faq 스타일  */
+.faq-container {
+    font-family: Arial, sans-serif;
+}
+
+.faq-categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.faqBtn
+ {
+ 		flex: 1;
+ 		margin-right: 15px;
+    padding: 10px;
+    border: 1px solid #b35454;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faqBtn.active {
+    background-color: firebrick;
+    color: #fff;
+}
+
+.faq-list {
+		font-weight:bold;
+    margin-bottom: 20px;
+}
+
+.faq-answer {
+	font-weight:normal;
+}
+
+.question {
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.question:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.policy {
+    margin-top: 20px;
+}
+
+.policyName {
+    font-weight: bold;
+}

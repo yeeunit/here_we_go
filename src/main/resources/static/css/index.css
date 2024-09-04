@@ -1,0 +1,823 @@
+@charset "UTF-8";
+
+/* 메인 */
+.main {
+	/* width: 100%; */
+	width: 1280px;
+	/* font-family: "GmarketSansMedium"; */
+	/* font-weight: lighter; */
+}
+
+/* 메인 이미지 */
+.imgSlide {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	/* padding-left: 100px; */
+	padding-bottom: 80px;
+	height: 800px;
+	width: 100%;
+	color: #fff;
+	font-size: 44px;
+	font-family: "yg-jalnan";
+}
+
+.imgSlide span {
+	line-height: 70px;
+}
+
+.main_image {
+	top: 90px;
+	left: 0;
+	position: absolute;
+	width: 100vw;
+	/* width: 100%; */
+	height: 800px;
+	background-image:
+		url("https://images.unsplash.com/photo-1523567353-71ea31cb9f73?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: -1;
+}
+
+/* 검색 */
+.search_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 140px;
+	background-color: #fff;
+	width: 100%;
+	font-size: 20px;
+	border-radius: 18px;
+	margin-top: 40px;
+	padding: 24px 36px;
+}
+
+.search_title {
+	display: flex;
+	width: 100%;
+	color: firebrick;
+	font-size: 20px;
+}
+
+#searchForm {
+	width: 100%;
+}
+.search_bar_wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: 50px;
+}
+
+.search_bar {
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	width: 330px;
+	height: 44px;
+	background: #eee;
+	border-radius: 10px;
+	color: #555;
+	font-size: 16px;
+	border: none;
+}
+
+.searchBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 44px;
+	background-color: firebrick;
+	border:none;
+	border-radius: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 20px;
+	font-family: "GmarketSansMedium";
+}
+
+.searchBtn:hover {
+	/* font-weight: 600; */
+	
+}
+
+/* 공통 라벨 */
+.label {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 26px;
+	color: firebrick;
+	/* color: #333; */
+	/* font-weight: 600; */
+	margin: 20px 0;
+	font-family: "JalnanGothic";
+}
+
+.label span {
+	font-size: 16px;
+	color: rgb(51, 109, 255);
+	cursor: pointer;
+	font-family: none;
+}
+
+.label span:hover {
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+/* 이벤트 */
+.event {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 40px 0;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.event_item_wrap {
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+}
+
+.event_items {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 160px;
+	transition: transform 0.3s ease-in-out;
+	/* 	padding: 0 10px; */
+}
+
+.event_item {
+	display: flex;
+	flex-direction: column;
+	align-item: center;
+	justify-content: center;
+	width: 100%;
+	min-width: 300px;
+	background-color: #eee;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 10px;
+	position: relative;
+}
+
+.event_text {
+	display: flex;
+	flex-direction: column;
+	align-item: center;
+	justify-content: center;
+	z-index: 99;
+	color: #fff;
+	font-size: 20px;
+	text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.9);
+	font-weight: 600;
+	position: absolute;
+	top: 30%;
+	position: absolute;
+	width: 100%;
+}
+
+.event_text  span {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+.event_item img {
+	position: absolute;
+	width: 100%;
+	object-fit: cover;
+	top: 0;
+	z-index: 1;
+	object-position: center;
+}
+
+.event_item img:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+	filter: brightness(80%);
+}
+
+.next_button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #fff;
+	box-shadow: 3px 3px 3px #bbb;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 99;
+	border: 1px solid #eee;
+	padding: 12px;
+}
+
+.next_button img {
+	width: 100%;
+}
+
+.prev_btn {
+	position: absolute;
+	top: 55%;
+	left: -10px;
+	z-index: 99;
+}
+
+.next_btn {
+	position: absolute;
+	top: 55%;
+	right: -10px;
+	z-index: 99;
+}
+
+.pagination {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 인기 여행지 */
+.travel {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: #fff;
+	margin-bottom: 30px;
+}
+
+.travel_item_wrap {
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	/* border: 1px solid red; */
+}
+
+.travel_item {
+	display: flex;
+	/* width: 250px; */
+	height: 230px;
+	margin-right: 32px;
+	background-color: #eee;
+	border-radius: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	flex: 0 0 230px; /* 고정된 너비 */
+	
+	position: relative;
+}
+.pop_text {
+	 display: flex;
+      flex-direction: column;
+      align-item: center;
+      justify-content: center;
+      width: 100%;
+      z-index: 99;
+      color: #fff;
+      font-size: 20px;
+      text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.9);
+      font-weight: 600;
+      position: absolute;
+      top: 45%;
+      position: absolute
+}
+.pop_text  span {
+	display: block;
+      text-align: center;
+	width: 100%;
+}
+
+.travel_item img {
+      width: 100%;
+      object-fit: cover;
+      z-index: 1;
+      object-position: center;
+}
+
+.travel_item img:hover {
+	transform: scale(1.1);
+	filter: brightness(80%);
+}
+
+.circle {
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	margin: 0 6px;
+	margin-top: 30px;
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+.circle.active {
+	background-color: firebrick;
+}
+
+/* 인기 추천 숙소 */
+.hotels {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.tags {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.tagBtn {
+	display: inline-block;
+	white-space: nowrap;
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #999;
+	border-radius: 20px;
+	font-size: 15px;
+	font-weight: 500;
+	margin-right: 12px;
+	background-color: white;
+	color: #444;
+	cursor: pointer;
+}
+
+
+.btnActive {
+	background-color: rgb(51, 109, 255);
+	color: #fff;
+}
+
+
+.hotel_item_wrap {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.hotel_item {
+	width: 320px;
+	height: 360px;
+	display: flex;
+	flex-direction: column;
+}
+
+.hotel_img {
+	display: flex;
+	width: 270px;
+	height: 200px;
+	background-color: #eee;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	cursor: pointer;
+	align-items: center;
+}
+
+.hotel_img img {
+	width: 100%;
+	height: 100%;
+	/* object-fit: cover; */
+}
+
+.hotel_text {
+	display: flex;
+	flex-direction: column;
+	color: #444;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 40px;
+}
+
+.hotel_text span {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 10px;
+}
+
+.hotel_rate {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: orange;
+	font-size: 13px;
+	font-weight: 600;
+	border-radius: 6px;
+	width: 50px;
+	height: 24px;
+	margin-right: 8px;
+}
+
+.rate_wrap {
+	display: flex;
+	align-items: center;
+}
+
+.hotel_price {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 40px;
+}
+
+/* 기획전 모음 */
+.special {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/* border: 1px solid red; */
+	margin-bottom: 60px;
+}
+
+.special_item_wrap {
+	display: flex;
+	flex-direction: row;
+	transition: transform 1s ease;
+	width: max-content;
+	font-size: 30px;
+	color: #666;
+	font-weight: 800;
+}
+
+.special_item {
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 400px;
+	align-items: center;
+	justify-content: center;
+	height: 180px;
+	background: #d9edf7;
+	border-radius: 10px;
+	margin-right: 40px;
+	transition: transform 1s ease;
+	font-family: "JalnanGothic";
+	line-height: 44px;
+}
+
+.special_item span {
+	font-size: 22px;
+	display: block;
+	line-height: 30px;
+
+	/* color: hotpink; */
+}
+/* 국내 여행지 */
+.regions {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 158px;
+	padding-top: 50px;
+	padding-left: 40px;
+	background-color: #eee;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	border-radius: 20px;
+	transition: height 0.3s ease;
+	overflow: hidden;
+}
+
+.expanded {
+	height: 500px;
+}
+
+.regions_text {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	font-size: 22px;
+	margin-bottom: 30px;
+	color: #555;
+	/* font-weight: 700; */
+	/* font-family: "GmarketSansMedium"; */
+	font-family: "JalnanGothic";
+}
+
+.regions span {
+	font-size: 18px;
+	margin-right: 30px;
+	color: rgb(51, 109, 255);
+	font-family: "GmarketSansMedium";
+}
+
+.regions span:hover {
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.rg_box {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+	color: #555;
+	font-size: 18px;
+	line-height: 40px;
+	/* border: 1px solid #aaa; */
+	/* margin-top: 50px; */
+}
+
+.rg_box_video {
+	width: 530px;
+	height: 300px;
+	border: 1px solid #aaa;
+	background: #999;
+	margin-top: 30px;
+	margin-right: 50px;
+}
+
+.rg_box_text {
+	width: 560px;
+	height: 300px;
+	white-space: normal;
+	word-wrap: break-word;
+	/* border: 1px solid #aaa; */
+	margin-top: 30px;
+}
+
+#to_top_Btn {
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom: 3%;
+	right: 7%;
+	width: 56px;
+	height: 56px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 99;
+	font-weight: 600;
+	background-color: #fff;
+	display: none;
+
+}
+
+#to_top_Btn:hover {
+	color: rgb(51, 109, 255);
+}
+
+/* 챗봇 */
+#chatbot {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom: 10%;
+	right: 5%;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 999;
+	/* background-color: #f9f9f9; */
+	/* box-shadow: 3px 3px 3px #aaa; */
+	visibility: visible;
+	/* transition: opacity 3s ease, visibility 3s ease; */
+}
+
+.chatBox_wrap, #chatbot {
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#chatbot.hidden, .chatBox_wrap.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#chatbot.visible, .chatBox_wrap.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+#chatbot img {
+	height: 200px;
+	/* border: 1px solid red; */
+	margin-bottom: 10px;
+}
+
+.chatbot_title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: firebrick;
+	width: 124px;
+	height: 28px;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 13px;
+	position: absolute;
+	bottom: 38px;
+}
+
+.chatBox_wrap {
+	/* display: none; */
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	width: 340px;
+	height: 600px;
+	/* height: 600px; */
+	/* padding: 18px 10px; */
+	background: #9bbbd4;
+	border-radius: 20px;
+	/* background-color: #fafafa; */
+	/* background-color: #fff; */
+	border: 1px solid #aaa;
+	overflow: hidden;
+	z-index: 999;
+
+	/* visibility: hidden; */
+
+	/* transition: opacity 3s ease, visibility 3s ease; */
+}
+
+#chatHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 44px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #444;
+	background-color: #fff;
+	padding-left: 22px;
+	padding-right: 10px;
+
+	/* border: 1px solid red; */
+}
+
+#closeBtn {
+	border: none;
+	background: none;
+	float: right;
+	font-size: 24px;
+	font-weight: 600;
+	color: #444;
+	cursor: pointer;
+}
+
+#chatBox {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 500px;
+	padding: 20px;
+	/* justify-content: space-between; */
+	/* width: 300px; */
+	/* height: 480px; */
+	overflow-y: scroll;
+	/* box-shadow: 3px 3px 3px #aaa; */
+}
+
+.chat_text_box {
+	width: 100%;
+	height: 400px;
+	/* border: 1px solid black; */
+}
+
+#chatForm {
+	display: flex;
+	justify-content: center;
+	/* padding: 10px 0; */
+}
+
+.input_message {
+	display: flex;
+	align-items: center;
+	width: 250px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: #eee;
+	padding: 0 14px;
+	margin-right: 6px;
+}
+
+.input_message input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	color: inherit;
+}
+
+.input_message input:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.input_msg_button {
+	width: 60px;
+	height: 40px;
+	background: #888;
+	color: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.input_msg_button:hover {
+	color: #fef01b;
+	font-weight: 600;
+}
+
+.input_msg_button input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	background: inherit;
+	cursor: pointer;
+}
+
+#message {
+	width: 100%;
+}
+
+.msgBox {
+	/* 입력한 메시지가 출력될 박스 */
+	padding: 3px 5px;
+	word-break: break-all;
+	max-width: 300px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.msgBox>span {
+	padding: 3px 5px;
+	word-break: break-all;
+	display: block;
+	max-width: 300px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.msgBox.send>span {
+	float: right;
+	background: #fef01b;
+}
+
+.msgBox.receive>span {
+	background: #ffffff;
+	float: left;
+}
+
+@font-face {
+	font-family: "GmarketSansMedium";
+	src:
+		url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JalnanGothic";
+	src:
+		url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "yg-jalnan";
+	src:
+		url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}

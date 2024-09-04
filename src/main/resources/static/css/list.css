@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+.header_date {
+  display: flex;
+  align-items: center;
+  width: 520px;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-right: 120px;
+  padding-left: 20px;
+  color: #555;
+}
+.filter-container {
+  display: flex;
+  max-width: 100%;
+  margin: 5px;
+  padding: 20px;
+}
+
+.filter {
+  width: 200px;
+  height: 600px;
+  margin: 10px;
+}
+
+.category {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.title {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.list-container {
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 10px;
+  min-height: 900px;
+  min-width: 800px;
+}
+
+.list-container h1 {
+  font-size: 23px;
+  font-weight: bold;
+  float: left;
+  margin-right: 500px;
+}
+
+.list {
+  width: 100%;
+  height: 140px;
+  border-bottom: 0.01px solid gray;
+  position: relative;
+  margin: 10px 0;
+}
+
+.list div {
+  display: inline-block;
+}
+
+.list img {
+  float: left;
+  margin: 1px;
+  border-radius: 10px;
+}
+
+.list img:hover {
+  opacity: 50%;
+}
+
+.list-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+---------호텔정보 .category {
+  font-size: 13px;
+}
+
+.name {
+  float: left;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.name:hover {
+  color: blue;
+}
+
+.address {
+  float: left;
+  font-size: 13px;
+}
+
+.mark {
+  float: left;
+  font-weight: bold;
+  font-size: 13px;
+  color: black;
+  background-color: gold;
+}
+
+.number {
+  float: left;
+  font-size: 13px;
+}
+
+.price {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
+-- 목록 정렬 버튼 .sort {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.sort button {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.sort-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.sort-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mark,
+.price {
+  margin-top: 5px;
+}
+
+.search_bar {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 330px;
+  height: 44px;
+  background: #eee;
+  border-radius: 10px;
+  color: #555;
+  font-size: 16px;
+  border: none;
+}

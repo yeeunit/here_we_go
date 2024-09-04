@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+      <mapper namespace="com.here_you_go.project.dao.IProductDAO">
+        
+            <resultMap id="productResult" type="com.here_you_go.project.model.ProductVO" >
+                  <result property="prdNo" column="prdNo"  />
+                  <result property="prdName_kor" column="prdName_kor"  />
+                  <result property="prdAddress" column="prdAddress"  />
+                 <result property="prdPrice" column="prdPrice"  />
+                  <result property="prdRate" column="prdRate"  />
+                  <result property="prdRateNum" column="prdRateNum"  />
+                 <result property="prdImg" column="prdImg"  />
+                  <result property="comNo" column="comNo"  /> 
+                  <result property="prdCtgId" column="prdCtgId"  /> 
+                  <result property="petctgId" column="petctgId"  /> 
+                  <result property="prdCtgName" column="prdCtgName" />
+                  
+            </resultMap>
+            
+            <!-- 전체 상품 조회 -->
+            <select id="listAllProduct" resultMap="productResult">
+                  SELECT p.*, pc.prdCtgName 
+                  FROM product p 
+                  JOIN prdcategory pc ON p.prdCtgId = pc.prdCtgId 
+                  ORDER BY CAST(prdNo AS UNSIGNED); ;
+            </select>
+            
+            
+            <!-- 상품 상세 정보 조회 -->
+	      <!-- 상품번호(string) 전달받아서 해당 상품 찾아서 반환 (VO) -->
+	      <select id="detailViewProduct" parameterType="string"
+	                  resultType="com.here_you_go.project.model.ProductVO">
+	            SELECT * FROM product WHERE prdNo = #{prdNo}
+	      </select>
+	      
+	      
+	      <!--  상품 검색 -->   <!--  여행지 검색시 prd 컬럼에 prdRegion 지역 추가 필요 -->
+            <select id="productSearch" parameterType="hashmap" resultMap="productResult">
+                  SELECT p.*, pc.prdCtgName FROM product p 
+                  JOIN prdcategory pc ON p.prdCtgId = pc.prdCtgId 
+                  WHERE prdName_kor LIKE CONCAT('%', #{search_hotel}, '%')
+                  ORDER BY CAST(prdNo AS UNSIGNED); 
+                   
+            </select>
+            
+            <!--  상품 카테고리별 필터 -->   
+            <select id="prdCtgSearch" parameterType="hashmap" resultMap="productResult">
+                  SELECT * FROM product WHERE prdCtgName LIKE  #{prdCtgName}
+            </select>
+      
+      
+            
+      </mapper>
+        

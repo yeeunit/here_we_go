@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+      <mapper namespace="com.here_you_go.project.dao.ITravelKorDAO">
+        
+            <resultMap id="travelKorResult" type="com.here_you_go.project.model.TravelKorVO" >
+                  <result property="trvNo" column="trvNo"  />
+                  <result property="trvRegionNo" column="trvRegionNo"  />
+                  <result property="trvTitle" column="trvTitle"  />
+                 <result property="trvText" column="trvText"  />
+                  <result property="trvVideo" column="trvVideo"  />
+                  <result property="trvRegionName" column="trvRegionName"  />  
+            </resultMap>
+            
+            <select id="listAllTravelKor" resultMap="travelKorResult">
+                  SELECT tk.*, tr.trvRegionName 
+                  FROM travel_kor tk 
+                  JOIN trvregion tr ON tk.trvRegionNo = tr.trvRegionNo
+                  ORDER BY CAST(tk.trvRegionNo AS UNSIGNED);
+            </select>
+            
+      </mapper>
+        

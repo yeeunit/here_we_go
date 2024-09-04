@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* event.css */
+
+/* event.css */
+
+/* 전체 컨테이너 */
+.event-container {
+    display: flex;
+    width: 80%;
+    margin: 20px auto; /* 중앙 정렬 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    flex-direction: column; /* 자식 요소들을 위에서 아래로 배치 */
+}
+
+/* 이벤트 제목 */
+.event-header {
+    color: #333;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* 주제 버튼 그룹 */
+.topicBtns {
+    display: flex;
+    margin-top: 25px;
+}
+
+.topicBtn {
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-right: 10px; /* 주제 버튼 사이 간격 */
+    border: 1px solid #fff;
+    background-color: white;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* 이벤트 리스트 */
+.event-list {
+    display: flex;
+    flex-wrap: wrap; /* 한 줄이 꽉 차면 다음 줄로 */
+    justify-content: flex-start; /* 좌측 정렬 */
+    text-align: center;
+}
+
+/* 링크 초기화 및 블록 요소로 변경 */
+.event-item-link {
+    display: block; /* 블록 요소로 변경 */
+    width: calc(33.33% - 20px); /* 한 줄에 3개의 항목 */
+    margin-bottom: 20px; 
+    margin-right: 20px; 
+    box-sizing: border-box; /* 패딩이 요소의 크기에 포함되도록 설정 */
+}
+
+
+/* 각 이벤트 항목 */
+.event-item {
+    height: 300px; /* 이벤트 항목의 기본 높이 */
+    text-align: left;
+    color: #333;
+    cursor: pointer;
+    padding: 20px; 
+    box-sizing: border-box; /* 패딩이 요소의 크기에 포함되도록 설정 */
+    background-color: white; 
+    border-radius: 10px; 
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column; /* 자식 요소들을 위에서 아래로 배치 */
+}
+
+.event-item:hover {
+    transform: translateY(-10px); /* 호버 시 위로 이동 */
+}
+
+/* 이벤트 이미지 */
+.event-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover; /* 이미지 비율 유지하며 자르기 */
+}
+
+/* 이벤트 제목 */
+.event-title {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* 이벤트 상태 */
+.event-status {
+    color: red;
+    background-color: #f1f1f1;
+    border-radius: 10px; 
+    border: 1px solid white;
+    font-size: 10px; 
+    font-weight: bold;
+    padding: 6px 12px; 
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* 이벤트 날짜 */
+.event-date { 
+    color: #9c9c9c;
+    font-weight: bold;
+}
+
+/* 숨겨진 요소들을 숨김 처리 */
+.hidden {
+    display: none;
+}

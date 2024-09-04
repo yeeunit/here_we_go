@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+.prd_wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+      padding-top: 40px;
+	color: #555;
+}
+
+.img_wrap {
+	display: flex;
+	width: 100%;
+	height: 500px;
+	margin-bottom: 30px;
+}
+
+.prd_main_image {
+	width: 700px;
+	height: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+.prd_main_image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.prd_small_img_wrap {
+	display: flex;
+	flex-wrap: wrap;
+	width: 600px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.prd_small_img_wrap  div {
+	width: calc(50% - 10px);
+	height: calc(50% - 5px);
+	margin: 0 5px 10px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.prd_small_img_wrap>div:nth-child(-n+2) {
+	margin-top: 0;
+}
+
+.prd_small_img_wrap div  img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.prd_info_wrap {
+	display: flex;
+	flex-direction: column; width : 100%;
+	width: 100%;
+}
+
+.prd_title {
+	display: flex;
+	width: 100%;
+	font-size: 34px;
+	font-weight: 800;
+	margin: 20px 0;
+}
+
+.prd_price {
+	display: flex;
+      width: 100%;
+      font-size: 26px;
+      font-weight: 600;
+      margin: 20px 0;
+      color: firebrick;
+	
+}
+.btn_wrap {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 50px 0;
+}
+
+.reservation_btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 50px;
+	border-radius: 10px;
+	background: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	border: 1px solid grey;
+}
+
+.reservation_btn:hover {
+	background: firebrick;
+	color: #fff;
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.joinPage {
+  text-align: center;
+}
+
+.joinBox {
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.radio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio label {
+  flex: 1;
+  text-align: center;
+}
+
+.joinbutton {
+  width: 100%;
+  padding: 15px 0;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin:Auto;
+  margin: 20px 0;
+  
+}
+
+.joinbutton:hover {
+  background: firebrick;
+  color: #fff;
+}

@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+.BusinessLoginPage {
+  text-align: center;
+}
+
+.BSBox {
+  width: 700px;
+  padding: 50px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  margin-top: 80px;
+  height: 550px;
+}
+/* 
+body {
+ 
+  background-color: firebrick; 
+
+}
+.header{
+	background-color:white;
+	width:100%;
+} */
+
+input[type="text"],
+input[type="password"],
+select {
+  width: calc(100% - 22px);
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 350px;
+}
+
+#BSinfo {
+  margin-top: 50px;
+  color: #333;
+  /* color: white; */
+}
+.input {
+  width: 100%;
+  height: 120px;
+}
+.input label {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 16px;
+}
+
+.BusinessLoginBtn {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 6px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  width: 140px;
+  height: 50px;
+  /* text-shadow: 0px 1px 0px #ffffff; */
+  margin-top: 30px;
+}
+.BusinessLoginBtn:hover {
+  /* background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6; */
+  background: firebrick;
+  color: #fff;
+}
+.BusinessLoginBtn:active {
+  position: relative;
+  top: 1px;
+}
